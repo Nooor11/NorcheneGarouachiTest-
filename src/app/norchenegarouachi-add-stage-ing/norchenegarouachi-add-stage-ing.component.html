@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2>Ajouter un stage</h2>
+  <form [formGroup]="stageForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="titre" class="form-label">Titre</label>
+      <input type="text" class="form-control" id="titre" formControlName="titre">
+      <div *ngIf="stageForm.get('titre')?.invalid && stageForm.get('titre')?.touched" class="text-danger">
+        Titre est obligatoire
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" formControlName="description"></textarea>
+      <div *ngIf="stageForm.get('description')?.invalid && stageForm.get('description')?.touched" class="text-danger">
+        Description doit contenir au moins 3 caractères
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="entreprise" class="form-label">Entreprise</label>
+      <input type="text" class="form-control" id="entreprise" formControlName="entreprise">
+      <div *ngIf="stageForm.get('entreprise')?.invalid && stageForm.get('entreprise')?.touched" class="text-danger">
+        Entreprise doit commencer par une majuscule et est obligatoire
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="stageForm.invalid">Ajouter</button>
+  </form>
+</div>

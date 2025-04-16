@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <h2>Liste des stages</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Titre</th>
+        <th>Entreprise</th>
+        <th>Disponible</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stage of stages">
+        <td>{{ stage.Titre }}</td>
+        <td>{{ stage.Entreprise }}</td>
+        <td>{{ stage.Disponible ? 'Oui' : 'Non' }}</td>
+        <td>
+          <a [routerLink]="['/norchenegarouachi-stage-details', stage.id]" class="btn btn-info me-2">Détails</a>
+          <button (click)="deleteStage(stage.id)" class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

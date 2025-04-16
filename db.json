@@ -1,0 +1,26 @@
+{
+  "stages": [
+    {
+      "id": "550f",
+      "titre": "pfe",
+      "description": "fff",
+      "entreprise": "Neoxam",
+      "Titre": "pfe",
+      "Description": "fff",
+      "Entreprise": "Neoxam",
+      "Disponible": true,
+      "nbrInteresse": 0
+    },
+    {
+      "id": "04e9",
+      "titre": "rr",
+      "description": "ffy",
+      "entreprise": "Nep",
+      "Titre": "rr",
+      "Description": "ffy",
+      "Entreprise": "Nep",
+      "Disponible": true,
+      "nbrInteresse": 0
+    }
+  ]
+}

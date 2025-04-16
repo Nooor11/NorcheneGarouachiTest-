@@ -1,0 +1,15 @@
+<div class="container mt-5" *ngIf="stage">
+  <h2>Détails du stage</h2>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ stage.Titre }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ stage.Entreprise }}</h6>
+      <p class="card-text">{{ stage.Description }}</p>
+      <p class="card-text">
+        <strong>Disponible:</strong> {{ stage.Disponible ? 'Oui' : 'Non' }}<br>
+        <strong>Nombre intéressés:</strong> {{ stage.nbrInteresse }}
+      </p>
+      <a routerLink="/norchenegarouachi-stages" class="btn btn-primary">Retour à la liste</a>
+    </div>
+  </div>
+</div>
